@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HackNest</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='c.css') }}">
+</head>
+<body>
+    <hack-nest></hack-nest>
+    <script type="module" src="{{ url_for('static', filename='js/mjs.js') }}"></script>
+
+    <!-- Then load your main script that uses StacheElement and ObservableArray -->
+    <script type="module" src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

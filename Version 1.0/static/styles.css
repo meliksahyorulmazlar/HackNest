@@ -1,0 +1,66 @@
+/* Custom Styles for HackNest */
+
+/* Hero Section Styling */
+.hero {
+    background: url('background.jpg') no-repeat center center/cover;
+    color: white;
+    height: 100vh;
+}
+
+/* Hero Text Styling */
+.hero h1 {
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.hero p.lead {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Slogan Styling */
+.hero p.slogan {
+    font-size: 1.8rem;
+    font-style: italic;
+    font-weight: 500;
+    margin-top: 1rem;
+    color: #f8f9fa; /* Light color for contrast with background */
+}
+
+/* Button Styling */
+.btn-primary {
+    background-color: #5a67d8;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+}
+
+.btn-outline-light {
+    border-color: white;
+    color: white;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+}
+
+.btn-outline-light:hover {
+    background-color: white;
+    color: #5a67d8;
+}
+
+/* Features Section Styling */
+.features h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.features p {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #343a40;
+    color: white;
+}
