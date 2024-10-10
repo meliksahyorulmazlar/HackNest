@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HackNest - Are You a Hacker or a Host?</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background-image: url('https://i.pinimg.com/564x/ab/81/17/ab8117f218102ea443f8f4bbf6763a16.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+        }
+        .hero {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+        .btn-hacker, .btn-host {
+            padding: 1rem 2rem;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            box-shadow: 0px 4px 10px rgba(0, 123, 255, 0.5);
+        }
+        .footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+        .social-icon {
+        width: 30px;
+        height: 30px;
+        margin: 10px 15px;
+    }
+
+    .social-icon:hover {
+        width: 35px;
+        height: 35px;
+    }
+    .navbar-brand{
+        font-size: 75px;
+    }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">
+                <img src="../static/rubber_duckie.png" alt="HackNest Logo" width="100" height="100" class="d-inline-block align-top">
+                HackNest
+            </a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Are You a Hacker or a Host?</h1>
+            <div>
+                <a href="/match" class="btn btn-primary btn-hacker">I’m a Hacker</a>
+                <a href="/match" class="btn btn-outline-light btn-host">I’m a Host</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+            <p>© 2024 HackNest. All rights reserved.</p>
+            <a href="#" class="text-white">Privacy Policy</a> |
+            <a href="#" class="text-white">Terms of Service</a>
+            <div class="social-icons">
+                <a href="https://www.facebook.com"><img src="../static/facebook-icon.png" alt="Facebook" class="social-icon"></a>
+                <a href="https://x.com/home"><img src="../static/twitter-icon.png" alt="Twitter" class="social-icon"></a>
+                <a href="https://www.instagram.com"><img src="../static/Instagram-icon.png" alt="Instagram" class="social-icon"></a>
+            </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

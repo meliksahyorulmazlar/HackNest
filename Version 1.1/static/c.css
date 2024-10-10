@@ -1,0 +1,298 @@
+@import 'https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css';
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+html {
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+}
+
+body {
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+button:focus {outline:0;}
+
+
+/* EVIL TINDER COMPONENT */
+hack-nest {
+  display: flex;
+  justify-content: flex-start;
+  height: 100vh;
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.header {
+  flex-shrink: 0;
+  height: 80px;
+  background:  url('') no-repeat center;
+  background-size: auto 55%;
+  border-bottom: 1px dotted lightgray;
+}
+
+.images {
+  position: relative;
+  flex-grow: 1;
+  flex-shrink: 1;
+  display: flex;
+  width: 150px;
+  height: 150px;
+}
+
+.footer {
+  flex-shrink: 0;
+  margin: 25px 0 30px;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  height: 100px;
+  width: 100%;
+  background: #f7f7f7;
+  z-index: 9999;
+}
+
+
+.current, .next {
+  top: 0px;
+  z-index: 100;
+
+}
+.current {
+  position: absolute;
+  display: flex;
+  top: 0px;
+  bottom: 0px;
+}
+.next {
+  z-index: 99;
+  margin-top: 15px;
+  position: relative;
+
+}
+
+.current img, .next img {
+  object-fit: cover;
+  object-position: 50% 0%;
+  border-radius: 10px;
+  box-shadow: 0px 0px 0px 2px rgba(240,240,240,1);
+}
+
+.current img {
+  width: 96vw;
+  margin: 2vw;
+}
+
+
+.next img {
+  height: 100%;
+  width: 94vw;
+  margin: 1vw 3vw;
+}
+.result {
+}
+.liking:after {
+  font-size: 25vw;
+  content: "Match";
+  padding: 10px 26px;
+  color: #73c998;
+  border: #73c998 2vw solid;
+  margin-top: 100px;
+  z-index: 9999;
+  display: inline-flex;
+  position: absolute;
+  border-radius: 30px;
+  text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+  opacity: 1;
+  transform: scale(1) rotate(-7deg);
+  animation: resultAnim .8s ease-in-out;
+}
+.noping:after {
+  font-size: 25vw;
+  content: "Nope";
+  padding: 6px 26px 16px;
+  color: #ed7571;
+  border: #ed7571 2vw solid;
+  margin-top: 100px;
+  z-index: 9999;
+  display: inline-flex;
+  position: absolute;
+  border-radius: 30px;
+  text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+  opacity: 1;
+  transform: scale(1) rotate(-7deg);
+  animation: resultAnim .8s ease-in-out;
+}
+@keyframes resultAnim {
+  0% {
+    transform: scale(3) rotate(0deg);
+    opacity: 0.2;
+  }
+  100% {
+    transform: scale(1) rotate(-7deg);
+    opacity: 1;
+  }
+}
+
+
+.likeBtn {
+  border-radius: 50%;
+  height: 115px;
+  width: 115px;
+  box-shadow: 0px 0px 0px 20px rgba(240,240,240,1);
+  border: none;
+  padding: 20px;
+  margin: 0 10px;
+  background:  url('https://canjs.com/docs/can-guides/commitment/recipes/tinder-like-carousel/img/heart.svg') no-repeat center;
+  background-size: auto 55px;
+  color : transparent;
+	font-size : 0;
+}
+.dissBtn {
+  border-radius: 50%;
+  height: 115px;
+  width: 115px;
+  box-shadow: 0px 0px 0px 20px rgba(240,240,240,1);
+  border: none;
+  padding: 50px;
+  margin: 0 10px;
+  background:  url('https://canjs.com/docs/can-guides/commitment/recipes/tinder-like-carousel/img/close.svg') no-repeat center;
+  background-size: auto 50px;
+  color : transparent;
+	font-size : 0;
+}
+
+@media screen
+  and (min-width: 320px)
+  and (max-width: 890px) {
+    .undoBtn, .superBtn {
+      height: 40px;
+      width: 40px;
+      padding: 25px;
+      margin: 0 3px;
+      box-shadow: 0px 0px 0px 10px rgba(240,240,240,1);
+      background-size: auto 25px;
+    }
+    .likeBtn, .dissBtn {
+      height: 90px;
+      width: 90px;
+      padding: 25px;
+      margin: 0 6px;
+      box-shadow: 0px 0px 0px 10px rgba(240,240,240,1);
+      background-size: auto 50px;
+    }
+}
+
+.images {
+  display: flex;
+  justify-content: center; /* Center images horizontally */
+  align-items: center; /* Center images vertically */
+  width: 100%;  /* Full width */
+  height: 100%; /* Full height */
+  position: relative; /* Ensure that images are relative to their container */
+}
+
+/* Current Image Styling */
+.images .current {
+  width: 33vw;   /* The image takes up 1/3 of the viewport width */
+  height: auto;  /* Height adjusts automatically based on the aspect ratio */
+  position: absolute; /* Keep the current image positioned absolutely */
+  left: 33vw;    /* Leave 1/3 of the page empty on the left */
+  transition: left 0.5s ease;  /* Smooth transition for positioning */
+}
+
+/* Next Image Styling */
+.images .next {
+  width: 33vw;   /* Same size as current image (1/3 of the page) */
+  height: auto;  /* Maintain aspect ratio */
+  left: 33vw;    /* Positioned in the same place as the current image */
+  opacity: 0.2;  /* Slight transparency for the next image */
+  position: absolute; /* Positioned absolutely */
+  transition: opacity 0.5s ease; /* Smooth transition for opacity */
+}
+
+/* Image Styling */
+.images img {
+  width: 100%;  /* Ensure the image takes up the full width of the container */
+  height: 100%; /* Ensure the image takes up the full height */
+  object-fit: cover; /* Ensure the image covers the container */
+  border-radius: 10px; /* Rounded corners for images */
+  box-shadow: 0px 0px 0px 2px rgba(240,240,240,1); /* Slight shadow */
+}
+
+/* new meliksah code */
+.images .current, .images .next {
+  width: 33vw;   /* The image takes up 1/3 of the viewport width */
+  height: auto;  /* Height adjusts automatically based on the aspect ratio */
+  position: absolute; /* Keep the current image positioned absolutely */
+  left: 33vw;    /* Center the image horizontally */
+  transition: all 0.5s ease;  /* Smooth transition for positioning */
+}
+
+/* Add a class that moves the current image off-screen to the left */
+.swiped-left .current {
+  left: -100vw; /* Move current image off-screen left */
+}
+
+.swiped-left .next {
+  left: 33vw;  /* Move the next image to the original position */
+  opacity: 1;  /* Make the next image fully visible */
+}
+
+/* Similar for swiping to the right */
+.swiped-right .current {
+  left: 100vw; /* Move current image off-screen to the right */
+}
+
+.swiped-right .next {
+  left: 33vw; /* Move the next image to the original position */
+  opacity: 1;
+}
+
+.images .current, .images .next {
+  width: 33vw;  /* The image takes up 1/3 of the viewport width */
+  height: auto; /* Maintain aspect ratio */
+  position: absolute; /* Position it absolutely */
+  left: 33vw;  /* Center the image horizontally */
+  transition: all 0.5s ease; /* Smooth transitions */
+}
+
+/* When swiped, move the current image out of the screen */
+.swiped-left .current {
+  left: -100vw; /* Move the current image to the left out of screen */
+}
+
+.swiped-left .next {
+  left: 33vw; /* Keep the next image centered */
+  opacity: 1; /* Ensure the next image is fully visible */
+}
+
+/* Similar for swiping to the right */
+.swiped-right .current {
+  left: 100vw; /* Move the current image to the right out of screen */
+}
+
+.swiped-right .next {
+  left: 33vw; /* Keep the next image centered */
+  opacity: 1;
+}
+
+.profile-info {
+  text-align: center;
+  margin-top: 10px;
+  color: white;
+}
+
+.profile-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.profile-info p {
+  margin: 2px 0;
+  font-size: 1.1rem;
+}
