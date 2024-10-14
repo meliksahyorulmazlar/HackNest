@@ -1,0 +1,31 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HackNest</title>
+    <link rel="stylesheet" href="/static/c.css">
+</head>
+<body>
+    <hack-nest>
+    <div class="header"></div>
+    <div class="result
+                       "></div>
+    <div class="images">
+      <div class="current">
+        <img alt="Current Profile Image" draggable="false" src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Joe_Locke_en_2022.jpg">
+      </div>
+      <div class="next">
+        <img alt="Next Profile Image" src="https://upload.wikimedia.org/wikipedia/commons/d/de/Madison_McLaughlin_2017.jpg">
+      </div>
+    </div>
+
+    <div class="footer">
+      <button class="dissBtn" on:click="this.nope()">Dislike</button>
+      <button class="likeBtn" on:click="this.like()">Like</button>
+    </div>
+  </hack-nest>
+    <script type="module" src="/static/js/mjs.js"></script>
+
+    <!-- Then load your main script that uses StacheElement and ObservableArray -->
+    <script type="module" src="/static/script.js"></script>
+
+</body></html>

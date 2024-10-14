@@ -1,0 +1,188 @@
+@import 'https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css';
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+html {
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+}
+
+body {
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+button:focus {outline:0;}
+
+
+/* EVIL TINDER COMPONENT */
+hack-nest {
+  display: flex;
+  justify-content: flex-start;
+  height: 100vh;
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.header {
+  flex-shrink: 0;
+  height: 80px;
+  background:  url('') no-repeat center;
+  background-size: auto 55%;
+  border-bottom: 1px dotted lightgray;
+}
+
+.images {
+  position: relative;
+  flex-grow: 1;
+  flex-shrink: 1;
+  display: flex;
+  width: 300px;
+  height: 400px;
+}
+
+.footer {
+  flex-shrink: 0;
+  margin: 25px 0 30px;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  height: 100px;
+  width: 100%;
+  background: #f7f7f7;
+  z-index: 9999;
+}
+
+
+.current, .next {
+  top: 0px;
+  z-index: 100;
+  
+}
+.current {
+  position: absolute; 
+  display: flex;
+  top: 0px;
+  bottom: 0px;
+}
+.next {
+  z-index: 99;
+  margin-top: 15px;
+  position: relative;
+  
+}
+
+.current img, .next img {
+  object-fit: cover;
+  object-position: 50% 0%;
+  border-radius: 10px;
+  box-shadow: 0px 0px 0px 2px rgba(240,240,240,1);
+}
+
+.current img {
+  width: 96vw;
+  margin: 2vw;
+}
+
+
+.next img {
+  height: 100%;
+  width: 94vw;
+  margin: 1vw 3vw;
+}
+.result {
+}
+.liking:after {
+  font-size: 25vw;
+  content: "Like";
+  padding: 10px 26px;
+  color: #73c998;
+  border: #73c998 2vw solid;
+  margin-top: 100px;
+  z-index: 9999;
+  display: inline-flex;
+  position: absolute;
+  border-radius: 30px;
+  text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+  opacity: 1;
+  transform: scale(1) rotate(-7deg);
+  animation: resultAnim .8s ease-in-out;
+}
+.noping:after {
+  font-size: 25vw;
+  content: "Nope";
+  padding: 6px 26px 16px;
+  color: #ed7571;
+  border: #ed7571 2vw solid;
+  margin-top: 100px;
+  z-index: 9999;
+  display: inline-flex;
+  position: absolute;
+  border-radius: 30px;
+  text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+  opacity: 1;
+  transform: scale(1) rotate(-7deg);
+  animation: resultAnim .8s ease-in-out;
+}
+@keyframes resultAnim {
+  0% {
+    transform: scale(3) rotate(0deg);
+    opacity: 0.2;
+  }
+  100% {
+    transform: scale(1) rotate(-7deg);
+    opacity: 1;
+  }
+}
+
+
+.likeBtn {
+  border-radius: 50%;
+  height: 115px;
+  width: 115px;
+  box-shadow: 0px 0px 0px 20px rgba(240,240,240,1);
+  border: none;
+  padding: 20px;
+  margin: 0 10px;
+  background:  url('https://canjs.com/docs/can-guides/commitment/recipes/tinder-like-carousel/img/heart.svg') no-repeat center;
+  background-size: auto 55px;
+  color : transparent;
+	font-size : 0;
+}
+.dissBtn {
+  border-radius: 50%;
+  height: 115px;
+  width: 115px;
+  box-shadow: 0px 0px 0px 20px rgba(240,240,240,1);
+  border: none;
+  padding: 50px;
+  margin: 0 10px;
+  background:  url('https://canjs.com/docs/can-guides/commitment/recipes/tinder-like-carousel/img/close.svg') no-repeat center;
+  background-size: auto 50px;
+  color : transparent;
+	font-size : 0;
+}
+
+@media screen 
+  and (min-width: 320px) 
+  and (max-width: 890px) {
+    .undoBtn, .superBtn {
+      height: 40px;
+      width: 40px;
+      padding: 25px;
+      margin: 0 3px;
+      box-shadow: 0px 0px 0px 10px rgba(240,240,240,1);
+      background-size: auto 25px;
+    }
+    .likeBtn, .dissBtn {
+      height: 90px;
+      width: 90px;
+      padding: 25px;
+      margin: 0 6px;
+      box-shadow: 0px 0px 0px 10px rgba(240,240,240,1);
+      background-size: auto 50px;
+    } 
+}

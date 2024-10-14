@@ -1,0 +1,192 @@
+/* General Body Styling */
+body {
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.3); /* Reduce opacity */
+    padding: 20px 50px;
+}
+
+.navbar .navbar-brand img {
+    width: 120px;  /* Increase logo size */
+    height: 120px; /* Adjust height to match */
+}
+
+.navbar .navbar-brand {
+    font-size: 3rem;  /* Make HackNest text larger */
+    font-weight: bold;  /* Ensure it remains bold */
+    color: white;       /* Text color */
+}
+
+.navbar .navbar-brand:hover {
+    color: #f8f9fa;     /* Optional: Change color slightly on hover */
+}
+
+/* Hero Section Styling */
+.hero {
+    background: rgba(0, 0, 0, 0.3); /* Add transparency layer for better text visibility */
+    color: white;
+    height: 100vh;
+    padding-bottom: 50px;
+    text-align: center;
+    width: 80%; /* Allow more room for text to fit */
+    margin: 0 auto; /* Center the content */
+}
+
+.hero .slogan {
+    font-size: 3.5rem;  /* Increase font size to make it stand out */
+    font-weight: bold;  /* Make text bold */
+    color: white;       /* Ensure text color is white */
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7); /* Add shadow to make the text stand out */
+    line-height: 1.2;   /* Adjust line height to make it more readable */
+    margin-bottom: 30px;  /* Add space below the slogan */
+    width: 100%;        /* Make it take the full width */
+    white-space: nowrap; /* Ensure the text stays on one line */
+}
+
+.hero .btn-primary {
+    background-color: #007bff;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    box-shadow: 0px 4px 10px rgba(0, 123, 255, 0.5); /* Add shadow to make button stand out */
+}
+
+.hero .btn-outline-light {
+    border-color: white;
+    color: white;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.5); /* Add shadow to make outline button stand out */
+}
+
+.hero .btn-primary:hover {
+    background-color: #0056b3; /* Change color on hover */
+}
+
+.hero .btn-outline-light:hover {
+    background-color: white;
+    color: #007bff; /* Change color on hover */
+}
+
+.hero .btn {
+    margin-top: 20px;  /* Add some space above the buttons */
+}
+
+/* Features Section */
+.features {
+    background-color: rgba(0, 0, 0, 0.5); /* Add background to features for better readability */
+    padding: 50px 0;
+    border-radius: 10px;
+    margin-top: 30px;
+    max-width: 1200px; /* Limit the width of the features section */
+    margin: 0 auto; /* Center the section */
+}
+
+.features h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.features p {
+    font-size: 1.2rem;
+}
+
+/* Footer Styling */
+.footer {
+    background-color: rgba(0, 0, 0, 0.3); /* Lighter footer */
+    padding: 30px 0;
+    text-align: center;
+    margin-top: 50px; /* Add margin between features and footer */
+}
+
+.footer a {
+    color: #f8f9fa;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Social Icon Styling */
+.social-icon {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+}
+
+.social-icon:hover {
+    width: 35px;
+    height: 35px;
+}
+
+/* Media Queries for Larger Screens */
+@media screen and (min-width: 992px) {
+    .hero h2 {
+        font-size: 3.5rem; /* Larger text for bigger screens */
+    }
+
+    .hero .slogan {
+        font-size: 4.5rem; /* Even larger font size for bigger screens */
+    }
+
+    .navbar .navbar-brand {
+        font-size: 3.5rem;  /* Larger HackNest text for big screens */
+    }
+
+    .hero .btn {
+        padding: 1.2rem 2.5rem; /* Larger buttons */
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .features {
+        padding: 60px 0; /* Increase padding on larger screens */
+    }
+
+    .footer {
+        padding: 30px 0;
+    }
+
+    .features .row {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3-column layout for features */
+        gap: 20px;
+    }
+}
+
+/* Media Queries for Smaller Screens */
+@media screen and (max-width: 768px) {
+    .hero h2 {
+        font-size: 2rem; /* Smaller font for mobile screens */
+    }
+
+    .features h3 {
+        font-size: 1.5rem;
+    }
+
+    .features p {
+        font-size: 1rem;
+    }
+
+    .features .row {
+        grid-template-columns: 1fr; /* Stack features on smaller screens */
+    }
+}
+
+
